@@ -4,6 +4,9 @@ import "./app.css";
 import "@appwrite.io/pink-icons";
 import { useState } from "react";
 import { useAuth } from "@/context/AuthContext";
+import NextjsLogo from "../static/nextjs-icon.svg";
+import AppwriteLogo from "../static/appwrite-icon.svg";
+import Image from "next/image";
 import LoginForm from "@/components/LoginForm";
 import RegisterForm from "@/components/RegisterForm";
 import RestaurantDashboard from "@/components/RestaurantDashboard";
@@ -61,6 +64,34 @@ export default function Home() {
             <div className="text-left">
               <h1 className="text-4xl font-bold text-gray-800 mb-1">RestaurantMS</h1>
               <p className="text-gray-600 text-lg">Professional Management System</p>
+            </div>
+          </div>
+          
+          <div className="flex items-center justify-center space-x-8 mb-8">
+            <div className="flex items-center space-x-3">
+              <div className="w-12 h-12 bg-white rounded-xl shadow-md flex items-center justify-center border border-orange-100">
+                <Image
+                  alt={"Next.js logo"}
+                  src={NextjsLogo}
+                  width={24}
+                  height={24}
+                />
+              </div>
+              <span className="text-gray-600 font-medium">Next.js</span>
+            </div>
+            
+            <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
+            
+            <div className="flex items-center space-x-3">
+              <div className="w-12 h-12 bg-white rounded-xl shadow-md flex items-center justify-center border border-orange-100">
+                <Image
+                  alt={"Appwrite logo"}
+                  src={AppwriteLogo}
+                  width={24}
+                  height={24}
+                />
+              </div>
+              <span className="text-gray-600 font-medium">Appwrite</span>
             </div>
           </div>
         </div>
